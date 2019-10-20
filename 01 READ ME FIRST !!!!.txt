@@ -7,7 +7,6 @@ ADMIN   username :admin
         password :client123 
 
 
-Developed By Hamdy Elbatal
 
 DON'T FORGET TO CREATE A DATABASE NAMING "loginsystem" AND IMPORT THE SQL FILE.
 WITHOUT THE DATABASE THE PROJECT WON'T RUN.
