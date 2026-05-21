@@ -1,95 +1,103 @@
-# ⚡ DevSuite — Premium PHP Developer Dashboard & Workspace
+# ⚡ DevForge — Premium PHP Developer Workspace
 
 [![PHP Version](https://img.shields.io/badge/PHP-%E2%89%A5%208.0-777bb4.svg?style=for-the-badge&logo=php)](https://www.php.net)
 [![Database](https://img.shields.io/badge/Database-SQLite-003b57.svg?style=for-the-badge&logo=sqlite)](https://www.sqlite.org)
-[![Aesthetics](https://img.shields.io/badge/Aesthetics-Glassmorphism-blueviolet.svg?style=for-the-badge)](https://en.wikipedia.org/wiki/Glassmorphism)
+[![Aesthetics](https://img.shields.io/badge/Design-Glassmorphism-blueviolet.svg?style=for-the-badge)](https://en.wikipedia.org/wiki/Glassmorphism)
 [![License](https://img.shields.io/badge/License-MIT-green.svg?style=for-the-badge)](LICENSE)
 
-DevSuite is a state-of-the-art, high-performance, and beautifully crafted developer workspace designed to streamline daily workflows. It bundles core developer utilities, custom REST clients, cryptographic tools, and uptime monitoring services into a single lightweight, zero-dependency, glassmorphic dark-mode PHP application.
+**DevForge** is a state-of-the-art, self-hosted developer workspace built entirely in modern PHP 8+. It bundles the most essential daily developer tools — REST client, uptime monitoring, JWT analysis, cryptography lab, and a live SQL runner — into a single zero-dependency, glassmorphic dark-mode application.
+
+No frameworks. No Composer. Just PHP 8 and your browser.
 
 ---
 
-## ✨ Features
+## ✨ Feature Set
 
-### 📈 Uptime & API Service Monitor
-* Live health tracking of microservices, APIs, databases, and third-party integrations.
-* Persistent SQLite database storage for monitored targets.
-* Displays response time (roundtrip latency) and HTTP status indicators.
-* Interactive card grid with smooth status updating animations.
+### 📈 Uptime & Service Monitor
+- Live HTTP health checks for APIs, websites, and microservices
+- Persistent SQLite storage for all monitored targets
+- Displays HTTP status code, latency (ms), and last-check timestamp
+- Smooth animated status cards (UP / DOWN / UNKNOWN)
 
 ### 🚀 API REST Client
-* Modern visual request builder to run, test, and debug HTTP calls (`GET`, `POST`, `PUT`, `DELETE`, etc.).
-* Custom HTTP Headers editor.
-* Integrated JSON request body compiler.
-* Formatted syntax-highlighted response browser displaying response size, latency, HTTP status, and headers.
+- Full HTTP request builder: `GET`, `POST`, `PUT`, `DELETE`, `PATCH`
+- Dynamic custom headers editor
+- JSON / raw request body support
+- Formatted response viewer with syntax-highlighted JSON output, status code badge, and round-trip time
 
-### 🛡️ Crypto & Cipher Lab
-* **BCrypt Suite**: Fast secure password hashing and verification with configurable work/cost factor.
-* **AES-256 Symmetric Suite**: Advanced symmetric encryption and decryption of raw text using strong secret-key derivations (AES-256-CBC).
+### 🛡️ Hash & Cryptography Lab
+- **BCrypt**: Generate secure password hashes with configurable cost factor; verify plaintext against stored hash
+- **AES-256-CBC**: Symmetric encrypt and decrypt any string using a passphrase key
 
-### 🔑 JWT Decoder
-* Fast JSON Web Token (JWT) analyzer.
-* Decodes and displays token parts (Header, Claims/Payload, and Signature) instantly with beautiful structured coloring.
+### 🔑 JWT Token Decoder
+- Paste any JWT and instantly decode the Header, Payload claims, and Signature
+- Color-coded output for quick scanning of token contents
 
-### 📝 JSON Prettifier & Minifier
-* Beautifies complex JSON structures with collapsible syntax indentations.
-* One-click validation and JSON syntax error detection.
-* Lightweight JSON minimizer to compress configurations for production.
+### 📝 JSON Prettifier & Validator
+- One-click JSON beautifier with indented, readable output
+- Live syntax error detection and validation messages
+- JSON minifier for compact production configs
 
 ### 💾 SQL Query Runner
-* Lightweight direct SQLite workspace database interface.
-* Safe SQL playground with dynamic HTML outputs and detailed execution times.
+- Direct SQLite playground connected to the DevForge database
+- Execute any `SELECT`, `INSERT`, `UPDATE`, `DELETE` statement
+- Dynamic HTML table output for `SELECT` results; row-count feedback for write operations
 
 ---
 
-## 🎨 Visual Design Systems
-* **Glassmorphic Surface Design**: Semi-transparent, blur-backed surface containers (`backdrop-filter`) creating premium layered interfaces.
-* **Curated Dark Color Palette**: Slate and deep space backgrounds with neon indigo, emerald green, and soft amber highlighting badges.
-* **Custom Typography**: Premium standard Inter for interfaces and JetBrains Mono for system responses and code blocks.
-* **Interactive Micro-Animations**: Smooth, responsive CSS transform actions on clicks, hovers, and status refreshes.
+## 🎨 Design System
+
+- **Glassmorphic surfaces** — semi-transparent, blur-backed panels (`backdrop-filter`)
+- **Curated dark palette** — deep space backgrounds with indigo, emerald, and amber accents
+- **Premium typography** — Inter for UI, JetBrains Mono for code and response blocks
+- **Micro-animations** — smooth CSS transforms on hover, status refresh, and tab transitions
+- **Custom scrollbars** — styled to match the dark theme
 
 ---
 
-## ⚙️ Quick Installation
+## ⚙️ Quick Start
 
-Getting DevSuite up and running is incredibly simple:
+**Requirements:** PHP 8.0+ with `pdo_sqlite`, `curl`, and `openssl` extensions (all enabled by default in modern PHP builds).
 
-1. **Clone the Repository**:
-   ```bash
-   git clone https://github.com/hamdyelbatal122/Client-Details-System-In-PHP.git
-   cd Client-Details-System-In-PHP
-   ```
+```bash
+# 1. Clone the repo
+git clone https://github.com/hamdyelbatal122/devforge.git
+cd devforge
 
-2. **Run Dev Server**:
-   Start PHP's built-in web server directly from your terminal:
-   ```bash
-   php -S localhost:8000
-   ```
+# 2. Start the built-in PHP server
+php -S localhost:8000
 
-3. **Open Workspace**:
-   Navigate to [http://localhost:8000](http://localhost:8000) on your favorite browser!
-
----
-
-## 📂 Architecture Structure
-
-```
-├── config.php            # Core configs, DB init, and auto-seeding
-├── api.php               # Backend JSON API endpoints (curl, SQL, crypto)
-├── index.php             # Core router and gorgeous front-end SPA dashboard
-├── db/
-│   └── devsuite.sqlite   # SQLite self-contained database
-└── README.md             # Technical overview
+# 3. Open in your browser
+open http://localhost:8000
 ```
 
+The SQLite database (`db/devforge.sqlite`) is created automatically on first run with three seed monitors pre-loaded.
+
 ---
 
-## 🔒 Security Principles
-* Built on strictly pure, secure PHP standard features without heavy, bloated dependencies.
-* Safe, query statement parameters binding prevents SQLite injection vectors in the SQL Playground.
-* Robust SSL verification bypass options designed strictly for convenient local development and API testing environments.
+## 📂 Project Structure
+
+```
+devforge/
+├── index.php       # Single-page SPA shell — all UI, styles, and JS
+├── api.php         # JSON API backend — handles all AJAX actions
+├── config.php      # App config, SQLite init, and seed data
+├── .gitignore      # Excludes db/*.sqlite from version control
+└── db/
+    └── devforge.sqlite   # Auto-created SQLite database (git-ignored)
+```
+
+---
+
+## 🔒 Security Notes
+
+- All SQL parameters are bound via PDO prepared statements — no injection vectors
+- AES-256-CBC encryption uses SHA-256 key derivation on the passphrase
+- BCrypt cost factor is configurable (8–14) to balance security and performance
+- SSL peer verification is disabled by design for the API client (local dev tool)
 
 ---
 
 ## 📜 License
-DevSuite is open-source software licensed under the [MIT License](LICENSE) — Hamdy Elbatal.
+
+[MIT](LICENSE) — Hamdy Elbatal

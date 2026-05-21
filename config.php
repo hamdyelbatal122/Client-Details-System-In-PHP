@@ -1,11 +1,11 @@
 <?php
 // config.php
-// DevSuite Core Configuration & Database Bootstrapper
+// DevForge Core Configuration & Database Bootstrapper
 
-define('APP_NAME', 'DevSuite');
+define('APP_NAME', 'DevForge');
 define('APP_VERSION', '1.0.0');
 define('DB_DIR', __DIR__ . '/db');
-define('DB_FILE', DB_DIR . '/devsuite.sqlite');
+define('DB_FILE', DB_DIR . '/devforge.sqlite');
 
 // Ensure DB directory exists
 if (!file_exists(DB_DIR)) {

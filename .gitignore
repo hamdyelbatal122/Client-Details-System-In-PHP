@@ -1,4 +1,4 @@
-# DevSuite GitIgnore
+# DevForge GitIgnore
 db/*.sqlite
 db/*.sqlite-journal
 .DS_Store

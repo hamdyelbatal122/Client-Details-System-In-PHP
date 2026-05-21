@@ -1,6 +1,6 @@
 <?php
 // index.php
-// DevSuite — Premium PHP Developer Dashboard & API Workspace
+// DevForge — Premium PHP Developer Workspace
 require_once __DIR__ . '/config.php';
 ?>
 <!DOCTYPE html>
@@ -8,7 +8,7 @@ require_once __DIR__ . '/config.php';
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DevSuite — Premium Developer Workspace</title>
+    <title>DevForge — Premium Developer Workspace</title>
     <!-- Google Fonts & FontAwesome -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -694,7 +694,7 @@ require_once __DIR__ . '/config.php';
                         <div id="headers-rows-container">
                             <div class="key-value-row">
                                 <input type="text" placeholder="Key (e.g. User-Agent)" class="header-key" value="User-Agent">
-                                <input type="text" placeholder="Value" class="header-value" value="DevSuite Workspace Client">
+                                <input type="text" placeholder="Value" class="header-value" value="DevForge Client">
                                 <button class="btn btn-danger btn-sm" onclick="this.parentElement.remove()"><i class="fa-solid fa-trash"></i></button>
                             </div>
                         </div>
@@ -889,7 +889,7 @@ require_once __DIR__ . '/config.php';
             <header>
                 <div class="header-title">
                     <h1>SQLite Query Runner</h1>
-                    <p>Execute SQL commands directly on your devsuite database playground.</p>
+                    <p>Execute SQL commands directly on your devforge database playground.</p>
                 </div>
             </header>
 

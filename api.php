@@ -1,6 +1,6 @@
 <?php
 // api.php
-// DevSuite Backend JSON API Handler
+// DevForge Backend JSON API Handler
 
 header('Content-Type: application/json');
 require_once __DIR__ . '/config.php';
