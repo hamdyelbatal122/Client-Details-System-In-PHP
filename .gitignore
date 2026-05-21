@@ -1,0 +1,6 @@
+# DevSuite GitIgnore
+db/*.sqlite
+db/*.sqlite-journal
+.DS_Store
+.vscode/
+.idea/

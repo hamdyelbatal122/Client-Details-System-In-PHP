@@ -1,59 +1,95 @@
-About Project
+# ⚡ DevSuite — Premium PHP Developer Dashboard & Workspace
 
-Client Details System is developed using PHP, CSS, Bootstrap, and JavaScript. Talking about the project, it contains almost all the essential features. This project contains user and admin side where a user can view all client details, enter customer details and admin can manage users, register new users, CRUD client details. The Admin plays an important role in the management of this simple system. A user can also register as a new user if he/she does not have an account.
+[![PHP Version](https://img.shields.io/badge/PHP-%E2%89%A5%208.0-777bb4.svg?style=for-the-badge&logo=php)](https://www.php.net)
+[![Database](https://img.shields.io/badge/Database-SQLite-003b57.svg?style=for-the-badge&logo=sqlite)](https://www.sqlite.org)
+[![Aesthetics](https://img.shields.io/badge/Aesthetics-Glassmorphism-blueviolet.svg?style=for-the-badge)](https://en.wikipedia.org/wiki/Glassmorphism)
+[![License](https://img.shields.io/badge/License-MIT-green.svg?style=for-the-badge)](LICENSE)
 
-About System
+DevSuite is a state-of-the-art, high-performance, and beautifully crafted developer workspace designed to streamline daily workflows. It bundles core developer utilities, custom REST clients, cryptographic tools, and uptime monitoring services into a single lightweight, zero-dependency, glassmorphic dark-mode PHP application.
 
-The user can view all the available client details and add them. In order to add client details, the user has to provide first name, last name, username, email address, phone number, image, plan name, plan price, user id document, company address, and home address. The Admin has full control of the system, all the main functions are to be performed from Admin panel. Here, the admin can perform CRUD functions on client details. He/she can manage users and register new user for the management of the system. A user can only delete client details from admin panel. The admin can also change their own password easily.
+---
 
-This project mainly focuses on CRUD functions. Design of this project is simple so that the user won’t find any difficulties while working on it. Client Details System in PHP helps in easy management of client details in an organization within a short period of time. To run this project you must have installed virtual server i.e XAMPP on your PC. Client Details System in PHP with source code is free to download, Use for educational purposes only! For the project demo, have a look at the image slider below.
+## ✨ Features
 
+### 📈 Uptime & API Service Monitor
+* Live health tracking of microservices, APIs, databases, and third-party integrations.
+* Persistent SQLite database storage for monitored targets.
+* Displays response time (roundtrip latency) and HTTP status indicators.
+* Interactive card grid with smooth status updating animations.
 
-USER LOGIN
+### 🚀 API REST Client
+* Modern visual request builder to run, test, and debug HTTP calls (`GET`, `POST`, `PUT`, `DELETE`, etc.).
+* Custom HTTP Headers editor.
+* Integrated JSON request body compiler.
+* Formatted syntax-highlighted response browser displaying response size, latency, HTTP status, and headers.
 
-CLIENT DETAILS
+### 🛡️ Crypto & Cipher Lab
+* **BCrypt Suite**: Fast secure password hashing and verification with configurable work/cost factor.
+* **AES-256 Symmetric Suite**: Advanced symmetric encryption and decryption of raw text using strong secret-key derivations (AES-256-CBC).
 
-CREATE USERS
+### 🔑 JWT Decoder
+* Fast JSON Web Token (JWT) analyzer.
+* Decodes and displays token parts (Header, Claims/Payload, and Signature) instantly with beautiful structured coloring.
 
-ADMIN LOGIN
+### 📝 JSON Prettifier & Minifier
+* Beautifies complex JSON structures with collapsible syntax indentations.
+* One-click validation and JSON syntax error detection.
+* Lightweight JSON minimizer to compress configurations for production.
 
-CLIENT DETAILS
+### 💾 SQL Query Runner
+* Lightweight direct SQLite workspace database interface.
+* Safe SQL playground with dynamic HTML outputs and detailed execution times.
 
-MANAGE USERS
+---
 
-REGISTER NEW USER
+## 🎨 Visual Design Systems
+* **Glassmorphic Surface Design**: Semi-transparent, blur-backed surface containers (`backdrop-filter`) creating premium layered interfaces.
+* **Curated Dark Color Palette**: Slate and deep space backgrounds with neon indigo, emerald green, and soft amber highlighting badges.
+* **Custom Typography**: Premium standard Inter for interfaces and JetBrains Mono for system responses and code blocks.
+* **Interactive Micro-Animations**: Smooth, responsive CSS transform actions on clicks, hovers, and status refreshes.
 
-CHANGE PASSWORD
+---
 
-Features:
+## ⚙️ Quick Installation
 
-Login System
-CRUD Client details
-User management
-How To Run??
-After Starting Apache and MySQL in XAMPP, follow the following steps
+Getting DevSuite up and running is incredibly simple:
 
-1st Step: Extract file
-2nd Step: Copy the main project folder
-3rd Step: Paste in xampp/htdocs/
+1. **Clone the Repository**:
+   ```bash
+   git clone https://github.com/hamdyelbatal122/Client-Details-System-In-PHP.git
+   cd Client-Details-System-In-PHP
+   ```
 
-Now Connecting Database
+2. **Run Dev Server**:
+   Start PHP's built-in web server directly from your terminal:
+   ```bash
+   php -S localhost:8000
+   ```
 
+3. **Open Workspace**:
+   Navigate to [http://localhost:8000](http://localhost:8000) on your favorite browser!
 
- 
-4th Step: Open a browser and go to URL “http://localhost/phpmyadmin/”
-5th Step: Then, click on the databases tab
-6th Step: Create a database naming “loginsystem” and then click on the import tab
-7th Step: Click on browse file and select “loginsystem.sql” file which is inside “DATABASE” folder
-8th Step: Click on go.
+---
 
-After Creating Database,
+## 📂 Architecture Structure
 
-9th Step: Open a browser and go to URL “http://localhost/clientdetails/”
+```
+├── config.php            # Core configs, DB init, and auto-seeding
+├── api.php               # Backend JSON API endpoints (curl, SQL, crypto)
+├── index.php             # Core router and gorgeous front-end SPA dashboard
+├── db/
+│   └── devsuite.sqlite   # SQLite self-contained database
+└── README.md             # Technical overview
+```
 
-For Admin Panel
-Final Step: Go to URL: http://localhost/clientdetails/admin/
+---
 
-Insert the username and password which is provided inside the “Readme.txt” file.
+## 🔒 Security Principles
+* Built on strictly pure, secure PHP standard features without heavy, bloated dependencies.
+* Safe, query statement parameters binding prevents SQLite injection vectors in the SQL Playground.
+* Robust SSL verification bypass options designed strictly for convenient local development and API testing environments.
 
-LOGIN DETAILS ARE PROVIDED IN “Readme.txt” FILE INSIDE THE PROJECT FOLDER
+---
+
+## 📜 License
+DevSuite is open-source software licensed under the [MIT License](LICENSE) — Hamdy Elbatal.
